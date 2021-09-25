@@ -7,7 +7,7 @@ const ProfileScreen = ({ route, navigation }) => {
   return (
     <View style={styles.container}>
       <Text>Profile Screen</Text>
-      <Text>Welcome {user.name} !</Text>
+      <Text>Welcome {user.name??user} !</Text>
     </View>
   );
 };
