@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, Button } from "react-native";
+import { StyleSheet, View, Button, Image } from "react-native";
 import * as Google from "expo-google-app-auth";
 import * as Facebook from 'expo-facebook';
 
@@ -59,8 +59,10 @@ const LoginScreen = ({ navigation }) => {
 }
   return (
     <View style={styles.container}>
+      <Image style = {{width:'100%', height:'60%',alignSelf:'center',alignItems:'stretch'}} source = {require('../assets/react-logo.png')} />
+      <View style = {{padding:10}}/>
       <Button title="Login with Google" onPress={signInGoogle} />
-      <View style = {{}}/>
+      <View style = {{padding:10}}/>
       <Button title="Login with FaceBook" onPress={signInFB} />
     </View>
   );
