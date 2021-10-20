@@ -2,11 +2,13 @@ import React from "react";
 import { StyleSheet, View, Button, Image } from "react-native";
 import * as Google from "expo-google-app-auth";
 import * as Facebook from 'expo-facebook';
-
+//import * as Device from 'expo-device';
+//import DeviceInfo from 'react-native-device-info';
 const LoginScreen = ({ navigation }) => {
   //Google ok
-   const signInGoogle = async () => {
-    console.log("loggin in");
+   async function signInGoogle() {
+    //console.log("Device " + DeviceInfo.getBundleId());
+    console.log("loggin in Google ");
     try {
       const { type, user } = await Google.logInAsync({
         iosClientId: "370667793988-vlr67ffj521i83tsds978nueak8famba.apps.googleusercontent.com",
@@ -21,7 +23,7 @@ const LoginScreen = ({ navigation }) => {
     } catch (error) {
       console.log("Login error:", error);
     }
-  };
+  }
   const signInFB = async () => {
     try {
       console.log('initializeAsync...');
